@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="score-container">
+        <div class="star" id="star1">★</div>
+        <div class="star" id="star2">★</div>
+        <div class="star" id="star3">★</div>
+        <div class="star" id="star4">★</div>
+    </div>
+    <div class="game-container">
+        <div class="draggable-items imgs-container grid-container">
+            <div class="dragable-zone">
+                <img src="images/car.png" alt="car" id="car" class="draggable img" draggable="true">
+            </div>
+            <div class="dragable-zone">
+                <img src="images/train.png" alt="train" id="train" class="draggable img" draggable="true">
+            </div>
+            <div class="dragable-zone">
+                <img src="images/truk.png" alt="truck" id="truck" class="draggable img" draggable="true">
+            </div>
+            <div class="dragable-zone">
+                <img src="images/plane.png" alt="plane" id="plane" class="draggable img" draggable="true">
+            </div>
+
+            <!-- Add more draggable items here -->
+        </div>
+        <div class="drop-zones imgs-container grid-container">
+            <div class="drop-zone" data-match="car">
+                <img class="img drop-outline" src="images/car-outline.png" alt="">
+            </div>
+            <div class="drop-zone" data-match="train">
+                <img class="img drop-outline" src="images/train-outline.png" alt="">
+            </div>
+            <div class="drop-zone" data-match="truck">
+                <img class="img drop-outline" src="images/truk-outline.png" alt="">
+            </div>
+            <div class="drop-zone" data-match="plane">
+                <img class="img drop-outline" src="images/plan-outline.png" alt="">
+            </div>
+            <!-- Add more drop zones here -->
+        </div>
+    </div>
+    <!-- Modal HTML -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <h3>Your score: <span class="star active">4 ★</span></h3>
+            <p>You completed the game!</p>
+            <button id="restart-btn">Restart Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
