@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function endGame() {
         modal.classList.remove('hidden');
-        playSound('cheer'); 
+        playSound('cheer'); // Ensure you have a cheer sound file in the 'sounds' folder
     }
 
     restartBtn.addEventListener('click', () => {
